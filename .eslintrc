@@ -23,6 +23,7 @@
     "no-console": [0],
     "arrow-body-style": [0],
     "prefer-arrow-callback": [0],
-    "react/jsx-no-constructed-context-values": "off"
+    "react/jsx-no-constructed-context-values": "off",
+    "no-unused-vars": "warn"
   }
 }
