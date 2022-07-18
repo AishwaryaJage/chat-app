@@ -10,6 +10,7 @@ function EditableInput({
   ...inputProps
 }) {
   const [input, setInput] = useState(initialValue);
+
   const [isEditable, setIsEditable] = useState(false);
   const onSaveClick = async () => {
     const trimmed = input.trim();
@@ -43,6 +44,7 @@ function EditableInput({
           onChange={onInputChange}
           value={input}
         />
+
         <InputGroup.Button onClick={onEditClick}>
           <Icon icon={isEditable ? 'close' : 'edit2 '} />
         </InputGroup.Button>
