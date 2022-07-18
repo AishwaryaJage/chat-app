@@ -1,6 +1,8 @@
 import React from 'react';
+import { Divider } from 'rsuite';
 import CreateRoomBtnModal from './dashboard/CreateRoomBtnModal';
 import DashboardToggle from './dashboard/DashboardToggle';
+import ChatRoomList from './rooms/ChatRoomList';
 
 function Sidebar() {
   return (
@@ -8,8 +10,9 @@ function Sidebar() {
       <div>
         <DashboardToggle />
         <CreateRoomBtnModal />
+        <Divider>Join Conversation</Divider>
       </div>
-      bottom
+      <ChatRoomList />
     </div>
   );
 }
