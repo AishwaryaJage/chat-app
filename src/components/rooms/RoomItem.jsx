@@ -27,8 +27,8 @@ function RoomItem({ room }) {
               />
             </div>
             <div>
-              <div className="italic"> {lastMessage.author.name} </div>
-              <span>{lastMessage.text}</span>
+              <div className="ml-1 italic"> {lastMessage.author.name} </div>
+              <span className="ml-1">{lastMessage.text}</span>
             </div>
           </>
         ) : (
