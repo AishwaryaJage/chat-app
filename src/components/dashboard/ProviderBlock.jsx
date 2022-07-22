@@ -5,11 +5,11 @@ import { auth } from '../../misc/firebase';
 
 function ProviderBlock() {
   const [isConnected, setIsConnected] = useState({
-    'google.com': auth.currentUser.providerData.some(
+    'google.com': auth.currentUser?.providerData.some(
       data => data.providerId === 'google.com'
     ),
-    'facebook.com': auth.currentUser.providerData.some(
-      data => data.providerId === 'facebookn.com'
+    'facebook.com': auth.currentUser?.providerData.some(
+      data => data.providerId === 'facebook.com'
     ),
   });
 
