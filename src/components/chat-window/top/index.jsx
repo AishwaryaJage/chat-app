@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { ButtonToolbar, Icon } from 'rsuite';
 import { useCurrentRoom } from '../../../context/current-room.context';
 import { useMediaQuery } from '../../../misc/custom-hooks';
+import AskFcmBtnModal from './AskFcmBtnModal';
 import EditRoomBtnDrawer from './EditRoomBtnDrawer';
 import RoomInfoBtnModal from './RoomInfoBtnModal';
+import SendFcmBtnModal from './sendFcmBtnModal';
 
 function Top() {
   const name = useCurrentRoom(v => v.name);
@@ -28,12 +30,13 @@ function Top() {
           />
           <span className="text-disappear">{name}</span>
         </h4>
-        <ButtonToolbar className="white-space: no-wrap">
+        <ButtonToolbar className="ws-nowrap">
+          <AskFcmBtnModal />
           {isAdmin && <EditRoomBtnDrawer />}
         </ButtonToolbar>
       </div>
       <div className="d-flex justify-content-between align-items-center">
-        <span> todo </span>
+        {isAdmin && <SendFcmBtnModal />}
         <RoomInfoBtnModal />
       </div>
     </div>

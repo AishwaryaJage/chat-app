@@ -26,12 +26,16 @@ function Chat() {
 
   const { name, description } = currentRoom;
   const admins = transformToArray(currentRoom.admins);
+  const fcmUsers = transformToArray(currentRoom.fcmUsers);
   const isAdmin = admins.includes(auth.currentUser.uid);
+  const isReceivingFcm = fcmUsers.includes(auth.currentUser.uid);
+
   const currentRoomData = {
     name,
     description,
     admins,
     isAdmin,
+    isReceivingFcm,
   };
   return (
     <CurrentRoomProvider data={currentRoomData}>
